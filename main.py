@@ -40,11 +40,11 @@ def img2ascii(img: Image.Image, scale: float = 1.0) -> list[list[str]]:
             data[y][x] = grayscale2ascii(gray)
     return data
 
-img = Image.open('info/d.jpg')
+img = Image.open('info/b.jpg')
 
-data = img2ascii(img, 0.05)
+data = img2ascii(img, 0.07)
 
-with open('d.txt', 'w') as f:
+with open('b.txt', 'w') as f:
     for line in data:
         f.write(''.join(line))
         f.write('\n')
